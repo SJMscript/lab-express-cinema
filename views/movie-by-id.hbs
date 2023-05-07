@@ -1,0 +1,29 @@
+<nav id="particular-nav">
+  <button id="particular-btn"><a href="/movies">Go Back</a></button>
+</nav>
+
+<div id="particular-page">
+  <img src="{{this.particularMovie.image}}" alt="Movie" width="400px"  height="450px"/>
+  <div id="particular-card">
+
+    {{#each this.particularMovie}}
+
+      <h1>{{this.title}}</h1>
+      <br>
+      <h3>{{this.director}}</h3>
+
+      {{#each this.stars}}
+        <li>{{this}}</li>
+      {{/each}}
+
+      <p>{{this.description}}</p>
+
+      {{#each this.showtimes}}
+        <li>{{this}}</li>
+      {{/each}}
+
+    {{/each}}
+
+  </div>
+
+</div>
